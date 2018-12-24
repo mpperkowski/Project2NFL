@@ -1,0 +1,25 @@
+<h1>Football Battle Royale</h1>
+
+
+
+
+<ul>
+  {{#each games}}
+  <form data-id="{{this.id}}" id="{{this.id}}" class="create-form" >
+    <div class="form-group">
+      <label for="team" value="{{id}}">{{week16}}</label>
+      <br>
+      <input type="radio" name="team" value="{{this.Home}}" checked> {{Home}}
+      <input type="radio" name="team" value="{{this.away}}"> {{away}}
+    </div>
+
+    <button data-id="{{this.id}}" type="submit" id="hide">make your pick</button>
+   
+    <button data-id="{{this.id}}" id="update-form" class="send" >Update pick</button>
+  </form>
+
+
+  {{/each}}
+</ul>
+ <button class="delquote">Delete all your picks</button>
+ <a href="/results">view your picks</a>
